@@ -1,6 +1,6 @@
 [
     {
         "name": "node-server",
-        "imageUri": "dvohra/node-server"
+        "imageUri": "public.ecr.aws/g3p1a4w6/node-pipeline"
     }
 ]
