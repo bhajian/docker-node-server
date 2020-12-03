@@ -4,8 +4,8 @@ phases:
     commands: 
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
-      - "docker build -t public.ecr.aws/g3p1a4w6/node-pipeline ."
-      - "docker tag public.ecr.aws/g3p1a4w6/node-pipeline public.ecr.aws/g3p1a4w6/node-pipeline:latest"
+      - "docker build -t node-pipeline ."
+      - "docker tag node-pipeline public.ecr.aws/g3p1a4w6/node-pipeline:latest"
   post_build: 
     commands: 
       - "echo Build completed on `date`"
