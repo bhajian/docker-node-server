@@ -5,15 +5,14 @@ phases:
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
       - "docker build -t node-pipeline ."
-      - "docker tag node-pipeline public.ecr.aws/g3p1a4w6/node-pipeline:latest"
-  post_build: 
+      - "docker tag node-pipeline 000965729629.dkr.ecr.us-east-1.amazonaws.com/node-pipeline
     commands: 
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
-      - "docker push public.ecr.aws/g3p1a4w6/node-pipeline:latest"
+      - "docker push 000965729629.dkr.ecr.us-east-1.amazonaws.com/node-pipeline"
   pre_build: 
     commands: 
       - "echo Logging in to Docker Hub..."
-      - "aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws"
+      - "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 000965729629.dkr.ecr.us-east-1.amazonaws.com"
 version: 0.1
 
